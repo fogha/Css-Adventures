@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    color: #555;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+a:link,
+a:visited{
+    color: rgb(61, 171, 255);
+    text-decoration: none;
+}
+
+a:hover,
+a:active{
+    cursor: pointer;
+}
+
+.auth-header {
+    width: 100%;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+main {
+    display: flex;    
+    flex-direction: row;
+    min-height:40vh;
+    width: 50%;
+    margin-top: 15%;
+}
+
+.img_box{
+    width: 60%;
+    height: 100%;
+    background-image: url(assets/ballpen-blur-close-up-computer-461077.jpg);
+    background-size: 200%;
+    background-position: center;
+}
+
+.form_area {
+    width: 60%;
+    min-height:100%;
+    display: flex;
+   justify-content: center;
+   box-shadow: 0px 10px 40px  rgb(113, 113, 113);
+   padding: 30px;
+}
+
+.form_inputs{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+label {
+    margin-top: 5px;
+    font-weight: 500;
+    color: rgb(114, 113, 113);
+    font-size: 16px;
+}
+
+input{
+    width: 100%;
+    height: 10%;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 3px;
+}
+
+input[type=submit] {
+    background-color: rgb(61, 171, 255);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border: none;
+    padding-left: 5px;
+}
+
+hr {
+    background-color: rgb(225, 225, 225);
+    height: 1px;
+    width: 100%;
+    border-width: 0;
+    margin: 0;
+}
+
+.alt-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    color: rgb(61, 171, 255);
+}

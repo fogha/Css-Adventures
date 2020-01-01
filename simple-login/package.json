@@ -1,0 +1,19 @@
+{
+  "name": "simple-login",
+  "version": "1.0.0",
+  "description": "A simple login system using nodejs, mysql, html and css",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Armand",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.5.0",
+    "mysql": "^2.18.1"
+  }
+}
