@@ -1,0 +1,78 @@
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    /*To overcome Shaking
+     problem in an animation */
+    margin-bottom: 6rem;
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation-name: MoveInLeft;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+        //Media Query
+        @include respond(phone) {
+            letter-spacing: 1rem;
+        }
+    }
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation-name: MoveInRight;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+        //Media Query
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
+    }
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: $default-font-size;
+    line-height: 1.7;
+    /* that means 1.7 times bigger 
+     than normal */
+    color: $color-grey-dark;
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: -10rem;
+    @include textgradient;
+    letter-spacing: .2rem;
+    transition: all .3s;
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2)
+    }
+    //Media Query
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+    @include respond(phone) {
+        font-size: 2rem;
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}

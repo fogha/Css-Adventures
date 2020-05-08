@@ -1,0 +1,69 @@
+.story {
+    width: 75%;
+    margin: 0 auto;
+    background-color: rgba($color-white, .7);
+    box-shadow: 0 3rem 6rem $color-black;
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;
+    transform: skewX(-12deg);
+    //MEDIA QUERY
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 6rem;
+    }
+    @include respond(phone) {
+        transform: skewX(0);
+    }
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left; //it works only when element has defined width and height 
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(45% at 50% 50%);
+        clip-path: circle(45% at 50% 50%);
+        transform: translate(-2rem, -2rem) skewX(12deg);
+        position: relative;
+        //MEDIA QUERY
+        @include respond(phone) {
+            transform: translate(-2rem, -2rem) skewX(0);
+        }
+    }
+    &__image {
+        height: 100%;
+        backface-visibility: hidden;
+        transform: translateX(-4rem) scale(1.4);
+        transition: all .3s;
+    }
+    &__text {
+        transform: skewX(12deg);
+        //MEDIA QUERY
+        @include respond(phone) {
+            transform: skewX(0);
+        }
+    }
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .3s;
+        backface-visibility: hidden;
+    }
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    &:hover &__image {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(70%);
+    }
+}

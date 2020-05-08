@@ -1,0 +1,43 @@
+.u-center-text {
+    text-align: center !important;
+}
+
+.u-margin-bottom-big {
+    margin-bottom: 8rem !important;
+    //MEDIA QUERY
+    @include respond(tab-port) {
+        margin-bottom: 5rem !important;
+    }
+}
+
+.u-margin-bottom-medium {
+    margin-bottom: 4rem !important;
+    //MEDIA QUERY
+    @include respond(tab-port) {
+        margin-bottom: 3rem !important;
+    }
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 1.5rem !important;
+}
+
+.u-margin-right-big {
+    margin-right: 8rem !important;
+    //MEDIA QUERY
+    @include respond(tab-port) {
+        margin-right: 5rem !important;
+    }
+}
+
+.u-margin-right-medium {
+    margin-right: 4rem !important;
+    //MEDIA QUERY
+    @include respond(tab-port) {
+        margin-right: 3rem !important;
+    }
+}
+
+.u-margin-right-small {
+    margin-right: 1.5rem !important;
+}
